@@ -8,8 +8,9 @@
             <?php echo $form->field($model, 'type');?>
             <?php echo $form->field($model, 'operation_system')->dropDownList(\app\models\Os::getOperationSystem());?>
             <?php echo $form->field($model, 'adapter')->dropDownList(\app\models\Os::getAdapters());?>
-	    <?php echo $form->field($model, 'username');?>
-	    <?php echo $form->field($model, 'password')->passwordInput();?>
+            <?php echo $form->field($model, 'guest')->dropDownList(\app\models\Os::getGuests());?>
+	        <?php echo $form->field($model, 'username');?>
+	        <?php echo $form->field($model, 'password')->passwordInput();?>
 
             <?php echo $form->field($model, 'status')->dropDownList(\app\models\Os::getStatusList());?>
 
